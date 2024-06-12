@@ -16,8 +16,10 @@ export default function Home() {
       <div className="grid grid-cols-3 gap-10">
         {goals.map((goal) => (
           <div
-            className={`border-2 rounded-2xl ${
-              goalSelection == goal.value && "border-green-600 bg-green-100"
+            className={`border-2 rounded-2xl  ${
+              goalSelection == goal.value
+                ? "border-green-600 bg-green-100"
+                : "bg-slate-100"
             } py-5 px-3 flex flex-col items-center justify-center`}
             onClick={() => setGoalSelection(goal.value)}
             key={goal.value}
